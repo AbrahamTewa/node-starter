@@ -29,6 +29,7 @@ jobs:
           script: "npm test"
 
         - stage: release
+          name: "Release"
           node_js: "10"
           # Advanced: optionally overwrite your default `script` step to skip the tests
           # script: skip
