@@ -1,0 +1,51 @@
+language: node_js
+
+node_js:
+  - "10"
+
+cache:
+  directories:
+    - ~/.npm
+
+notifications:
+  email: false
+
+stages:
+    - validation
+    - release
+
+jobs:
+    include:
+        - stage: validation
+          name: "Unit tests"
+          script: "npm test"
+          node_js:
+              - "8"  # Active LTS
+              - "10" # Next LTS
+              - "11" # Latest
+
+        - stage: validation
+          name: "Lint"
+          script: "npm test"
+
+        - stage: release
+          node_js: "10"
+          # Advanced: optionally overwrite your default `script` step to skip the tests
+          # script: skip
+          if branches: master
+          deploy:
+              provider: script
+              skip_cleanup: true
+              script:
+                - npm run semantic-release
+
+        - stage: release
+          name: "Documentation"
+          deploy:
+                provider: pages
+                skip-cleanup: true
+                github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+                keep-history: true
+                on:
+                    branch: master
+          if branches: master

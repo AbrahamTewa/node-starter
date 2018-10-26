@@ -1,0 +1,25 @@
+{
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "include": [
+        "src/**/*.js"
+    ],
+    "exclude": [
+        "src/**/*.spec.js",
+        "src/cli.js",
+        "src/index.js"
+    ],
+    "ignore-class-method": "methodToIgnore",
+    "reporter": [
+        "lcov",
+        "text-summary"
+    ],
+    "cache": true,
+    "all": true,
+    "temp-dir": "./cache/nyc",
+    "report-dir": "./reports/tests/unit/coverage"
+}

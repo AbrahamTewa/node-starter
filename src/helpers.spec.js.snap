@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Should return a string 1`] = `"Hello you !"`;
+
+exports[`getHelloMessage Should return a string 1`] = `"Hello you !"`;

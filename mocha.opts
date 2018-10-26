@@ -1,0 +1,8 @@
+--file mocha.setup.js
+--require source-map-support/register
+--require @babel/register
+--recursive
+--reporter mocha-multi-reporters
+--reporter-options configFile=mocha.reporters.json
+--use-strict
+--ui bdd
