@@ -1,6 +1,6 @@
 {
   "name": "starter.nodejs",
-  "version": "0.0.0-development",
+  "version": "1.0.1",
   "description": "Starter kit for NodeJS",
   "author": "Abraham TEWA",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "start:src": "node --inspect --require @babel/register src/cli.js",
     "start:brk": "node --inspect-brk --require @babel/register src/cli.js",
     "test": "gulp clean:tests:unit && mocha src/**/*.spec.js --opts mocha.opts",
-    "test-cov": "nyc npm test",
+    "test-cov": "nyc run-s test",
     "update:reference": "jsdoc2md -c jsdoc.json --files src > docs/REFERENCE.md"
   },
   "repository": {
