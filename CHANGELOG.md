@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.1.0...v1.2.0) (2018-10-29)
+
+
+### Features
+
+* Add coveralls.io badge ([874ba9a](https://github.com/AbrahamTewa/starter.nodejs/commit/874ba9a))
+
 # [1.1.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.0.1...v1.1.0) (2018-10-29)
 
 

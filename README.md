@@ -9,7 +9,7 @@ Simple node starter, using Babel 7, gulp 4, unit testing, eslinting, etc...
 ```
 git clone https://github.com/AbrahamTewa/starter.nodejs.git
 cd node-starter
-npm install
+npm ci
 npm run build
 npm start -- --help
 ```
@@ -21,6 +21,7 @@ This project is meant to be a NodeJS starter. It expose a simple CLI that displa
 ### Development experience
 - [Babel 7](http://babeljs.io/), using the `@babel/env` preset.
 - [gulp 4](https://github.com/gulpjs/gulp/blob/v4.0.0/docs/API.md) for task creation.
+- [conventional commits](http://conventionalcommits.org/) with [semantic-release](https://semantic-release.gitbook.io/)
 
 ### Code quality
 - [ESLint 5](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
@@ -35,9 +36,18 @@ Complete unit-testing environment :
 - [proxyquire](https://www.npmjs.com/package/proxyquire) to proxyfy modules and packages
 - [faker](https://www.npmjs.com/package/faker) to generate fake data
 
+### Continuous Integration
+- [Travis](http://travis-ci.org/) integration, with jobs for:
+    - Unit tests (all branches except `master`)
+    - Coverage (`master` branch only)
+    - Lint
+    - Release
+    - Github Pages
+
 ### Documentation
 - [jsDoc](http://usejsdoc.org/) with [minami theme](https://www.npmjs.com/package/minami) for documentation generation.
 - [GitBook](https://github.com/GitbookIO/gitbook), who, with [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) allow reference documentation into the book
+
 
 See `src/helpers.spec.js` for a complete example of all these tools.
 
