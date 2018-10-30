@@ -1,5 +1,6 @@
 # starter.nodejs
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/61b290f431c74b16bde5f12261532edc)](https://app.codacy.com/app/AbrahamTewa/starter.nodejs?utm_source=github.com&utm_medium=referral&utm_content=AbrahamTewa/starter.nodejs&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/AbrahamTewa/starter.nodejs.svg?branch=master)](https://travis-ci.org/AbrahamTewa/starter.nodejs) [![Coverage Status](https://coveralls.io/repos/github/AbrahamTewa/starter.nodejs/badge.svg?branch=master)](https://coveralls.io/github/AbrahamTewa/starter.nodejs?branch=master) [![Dependency status](https://david-dm.org/AbrahamTewa/starter.nodejs.svg)](https://david-dm.org/AbrahamTewa/starter.nodejs)
 
 Simple node starter, using Babel 7, gulp 4, unit testing, eslinting, etc...
