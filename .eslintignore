@@ -1,4 +1,5 @@
-cache/
-dist/
-reports/
-docs/
+/cache/
+/dist/
+/reports/
+/docs/
+/jsdoc/

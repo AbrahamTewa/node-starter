@@ -1,4 +1,10 @@
 {
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false,
+
     "check-coverage": true,
     "per-file": true,
     "lines": 99,
@@ -9,7 +15,6 @@
         "src/**/*.js"
     ],
     "exclude": [
-        "src/**/*.spec.js",
         "src/cli.js",
         "src/index.js"
     ],
