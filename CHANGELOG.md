@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.2.0...v1.3.0) (2018-10-31)
+
+
+### Bug Fixes
+
+* coverage + babel integration ([0780cc4](https://github.com/AbrahamTewa/starter.nodejs/commit/0780cc4))
+
+
+### Features
+
+* Add codacy badge ([0464297](https://github.com/AbrahamTewa/starter.nodejs/commit/0464297))
+* Add markdown lint with remark-lint cli ([20c36d5](https://github.com/AbrahamTewa/starter.nodejs/commit/20c36d5))
+
 # [1.2.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.1.0...v1.2.0) (2018-10-29)
 
 

@@ -17,7 +17,6 @@ This project is meant to be a NodeJS starter. It expose a simple CLI that displa
 - [ESLint 5](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
 - [EditorConfig](http://editorconfig.com/), just because it's a must-have.
 - [remark-lint](https://github.com/remarkjs/remark-lint) configured with recommended rules
-- [Codacy](https://codacy.com) integration
 
 ### Unit testing, with coverage
 Complete unit-testing environment :
@@ -28,6 +27,8 @@ Complete unit-testing environment :
 - [proxyquire](https://www.npmjs.com/package/proxyquire) to proxyfy modules and packages
 - [faker](https://www.npmjs.com/package/faker) to generate fake data
 
+See `src/helpers.spec.js` for a complete example of all these tools.
+
 ### Continuous Integration
 - [Travis](http://travis-ci.org/) integration, with jobs for:
   - Unit tests (all branches except `master`)
@@ -35,42 +36,11 @@ Complete unit-testing environment :
   - Lint
   - Release
   - Github Pages
+- [Codacy](https://codacy.com) integration
 
 ### Documentation
 - [jsDoc](http://usejsdoc.org/) with [minami theme](https://www.npmjs.com/package/minami) for documentation generation.
-- [GitBook](https://github.com/GitbookIO/gitbook), who, with [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown) allow reference documentation into the book
-
-
-See `src/helpers.spec.js` for a complete example of all these tools.
-
-```bash
-npm test
-```
-
-This will generate two reports:
-* `./reports/tests/unit/xunit.xml': Xunit report
-* `./reports/tests/unit/results/index.html`: [Mochawesome](https://www.npmjs.com/package/mochawesome) report
-
-#### Coverage
-Coverage is performed by using [Istanbul/nyc](https://istanbul.js.org/).
-
-```bash
-npm run test-cov
-```
-
-This command will generate:
-* Unit tests reports as describe bellow
-* `./reports/tests/unit/coverage/lcov.info' : lcov file
-* `./reports/tests/unit/coverage/lcov-report/index.html' : HTML report file
-
-### Continuous Integration
-Travis is already configured with several jobs and stages:
-
-| Stage       | Job           | Description                                                         |
-| Validation  | Unit tests    | Run unit testing                                                    |
-| Validation  | Lint          | Run code linting                                                    |
-| Publication | Documentation | (`master` branch only) Create and publish the project documentation |
-
+- [Docsify](http://docsify.js.org/), publish on Github pages
 
 ## Install
 
@@ -133,6 +103,26 @@ npm start
 Run the build of the application.
 The builder will create a new folder "build" in which the build will be added.
 
+```bash
+npm test
+```
+
+This will generate two reports:
+* `./reports/tests/unit/xunit.xml': Xunit report
+* `./reports/tests/unit/results/index.html`: [Mochawesome](https://www.npmjs.com/package/mochawesome) report
+
+#### Coverage
+Coverage is performed by using [Istanbul/nyc](https://istanbul.js.org/).
+
+```bash
+npm run test-cov
+```
+
+This command will generate:
+* Unit tests reports as describe bellow
+* `./reports/tests/unit/coverage/lcov.info' : lcov file
+* `./reports/tests/unit/coverage/lcov-report/index.html' : HTML report file
+
 ### `npm run lint`
 Lint source files using [ESLint](http://eslint.org)/.
 
@@ -149,3 +139,11 @@ Run the test using [Mocha](https://mochajs.org/).
 Output directory : `reports/tests/unit/`.
 
 The output directory it's clean at the begining of the command.
+
+## Continuous Integration
+Travis is already configured with several jobs and stages:
+
+| Stage       | Job           | Description                                                         |
+| Validation  | Unit tests    | Run unit testing                                                    |
+| Validation  | Lint          | Run code linting                                                    |
+| Publication | Documentation | (`master` branch only) Create and publish the project documentation |

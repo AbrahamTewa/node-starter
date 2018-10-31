@@ -39,26 +39,12 @@ gulp.task('convert:javascript', () => gulp.src('src/**/*.js')
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist')));
 
-gulp.task('convert:javascript:no-tests', () => gulp.src('src/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(babel())
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist')));
-
 // ============================================================
 // Composed tasks
 gulp.task(
     'build',
     gulp.series(
         'clean:build',
-        'convert:javascript:no-tests',
-    ),
-);
-
-gulp.task(
-    'build',
-    gulp.series(
-        'clean:build',
-        'convert:javascript:no-tests',
+        'convert:javascript',
     ),
 );
