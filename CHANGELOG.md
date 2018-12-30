@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.4.0...v1.5.0) (2018-12-30)
+
+
+### Bug Fixes
+
+* Sonar source files ([a995624](https://github.com/AbrahamTewa/starter.nodejs/commit/a995624))
+
+
+### Features
+
+* Add SonarCloud integration ([744c562](https://github.com/AbrahamTewa/starter.nodejs/commit/744c562))
+
 # [1.4.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.3.0...v1.4.0) (2018-12-27)
 
 
