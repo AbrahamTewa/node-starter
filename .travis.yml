@@ -17,19 +17,31 @@ stages:
 jobs:
     include:
         - stage: validation
+          name: "Lint"
+          script:
+                - npm run lint
+
+        - stage: validation
           name: "Unit tests"
-          script: "npm test"
+          if: branch != master
           node_js:
               - "8"  # Active LTS
               - "10" # Next LTS
               - "11" # Latest
+          script:
+              - npm test
 
-          branches:
-              except:
-                - master
 
         - stage: validation
           name: "Unit tests coverage"
+          if: branch in (master, develop)
+          node_js:
+              - "8"  # Active LTS
+              - "10" # Next LTS
+              - "11" # Latest
+          addons:
+            sonarcloud:
+              organization: "abrahamtewa-github"
           script:
             - npm run test-cov
 
@@ -37,38 +49,18 @@ jobs:
             - more reports/tests/unit/coverage/lcov.info | npx coveralls
 
             # Export coverage to codacy.com
-            # The CODACY_PROJECT_TOKEN variable MUST be set
+            # Use variable: CODACY_PROJECT_TOKEN
             # See https://github.com/codacy/node-codacy-coverage#identifying-the-project
             - more reports/tests/unit/coverage/lcov.info | npx codacy-coverage
-          node_js:
-              - "8"  # Active LTS
-              - "10" # Next LTS
-              - "11" # Latest
+            - more reports/tests/unit/coverage/lcov.info | npx codacy-coverage
 
-          branches:
-              except:
-                - master
-
-        - stage: validation
-          name: "Lint"
-          script:
-                - npm run lint
-
-        - stage: validation
-          name: SonarCloud
-          addons:
-            sonarcloud:
-              organization: "abrahamtewa-github"
-          script:
+            # Perform sonar analysis on the coverage
+            # Use variable: SONAR_TOKEN
             - sonar-scanner
 
         - stage: release
           name: "Release"
-          # Advanced: optionally overwrite your default `script` step to skip the tests
-          # script: skip
-          branches:
-              only:
-                  - master
+          if: branch = master
           deploy:
               provider: script
               skip_cleanup: true
@@ -77,6 +69,7 @@ jobs:
 
         - stage: release
           name: "Documentation"
+          if: branch = master
           deploy:
                 provider: pages
                 skip-cleanup: true
@@ -84,6 +77,3 @@ jobs:
                 keep-history: true
                 on:
                     branch: master
-          branches:
-              only:
-                  - master

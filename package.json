@@ -13,6 +13,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "gulp build",
+    "clean": "gulp clean",
     "doc:jsdoc": "jsdoc -c jsdoc.config.json --readme README.md",
     "lint": "run-s lint:*",
     "lint:javascript": "eslint .",
@@ -21,8 +22,8 @@
     "start": "node dist/cli.js",
     "start:src": "node --inspect --require @babel/register src/cli.js",
     "start:brk": "node --inspect-brk --require @babel/register src/cli.js",
-    "test": "gulp clean:tests:unit && mocha src/**/*.spec.js --opts mocha.opts",
-    "test-cov": "gulp clean:tests:unit && cross-env NODE_ENV=test nyc mocha src/**/*.spec.js --opts mocha.opts",
+    "test": "gulp clean:report:tests:unit && mocha src/**/*.spec.js --opts mocha.opts",
+    "test-cov": "gulp clean:report:tests:unit && cross-env NODE_ENV=test nyc mocha src/**/*.spec.js --opts mocha.opts",
     "update:reference": "jsdoc2md -c jsdoc.config.json --files src > docs/REFERENCE.md"
   },
   "repository": {
