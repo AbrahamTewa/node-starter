@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.5.0...v1.6.0) (2018-12-30)
+
+
+### Features
+
+* Add clean task ([7344e33](https://github.com/AbrahamTewa/starter.nodejs/commit/7344e33))
+* Include test and coverage result into SonarCloud analysis ([e444959](https://github.com/AbrahamTewa/starter.nodejs/commit/e444959))
+
 # [1.5.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.4.0...v1.5.0) (2018-12-30)
 
 
