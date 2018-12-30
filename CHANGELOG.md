@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.3.0...v1.4.0) (2018-12-27)
+
+
+### Features
+
+* Update dependencies ([57b7664](https://github.com/AbrahamTewa/starter.nodejs/commit/57b7664))
+
 # [1.3.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.2.0...v1.3.0) (2018-10-31)
 
 

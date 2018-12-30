@@ -17,6 +17,7 @@ This project is meant to be a NodeJS starter. It expose a simple CLI that displa
 - [ESLint 5](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
 - [EditorConfig](http://editorconfig.com/), just because it's a must-have.
 - [remark-lint](https://github.com/remarkjs/remark-lint) configured with recommended rules
+- [SonarCloud](https://sonarcloud.io) integration
 
 ### Unit testing, with coverage
 Complete unit-testing environment :
@@ -58,17 +59,18 @@ In travis, you need to setup the following variables for your project:
 * `CODACY_PROJECT_TOKEN`
 * `GITHUB_TOKEN`
 * `NPM_TOKEN`
+* `SONAR_TOKEN` for SonarCloud integration
 
 #### `CODACY_PROJECT_TOKEN`
 
 Codacy's project token. See "Project API" in the Settings/Integrations tab of the codacy project.
-This token will be by travis to send coverage report to codacy.
+This token will be by use travis to send coverage report to codacy.
 
 #### `GITHUB_TOKEN`
 
 [Personal access token](https://github.com/settings/tokens) configurable in Developer settings section.
 
-This token will be used for semantic-release. It enable the tool to update the repository with changelog, updated version of package.json and tag creation.
+This token will be use for semantic-release. It enable the tool to update the repository with changelog, updated version of package.json and tag creation.
 
 See:
 * [Semantic-release/github configuration](https://github.com/semantic-release/github#configuration)
@@ -80,6 +82,11 @@ It enable the publication of your package if it's not private.
 
 See:
 * [Semantic-release/npm configuration](https://github.com/semantic-release/npm#configuration)
+
+#### `SONAR_TOKEN`
+
+Enable SonarCloud integration.
+See [Travic documentation](https://docs.travis-ci.com/user/sonarcloud/)).
 
 ## Usage
 
@@ -104,24 +111,8 @@ Run the build of the application.
 The builder will create a new folder "build" in which the build will be added.
 
 ```bash
-npm test
+npm run build
 ```
-
-This will generate two reports:
-* `./reports/tests/unit/xunit.xml': Xunit report
-* `./reports/tests/unit/results/index.html`: [Mochawesome](https://www.npmjs.com/package/mochawesome) report
-
-#### Coverage
-Coverage is performed by using [Istanbul/nyc](https://istanbul.js.org/).
-
-```bash
-npm run test-cov
-```
-
-This command will generate:
-* Unit tests reports as describe bellow
-* `./reports/tests/unit/coverage/lcov.info' : lcov file
-* `./reports/tests/unit/coverage/lcov-report/index.html' : HTML report file
 
 ### `npm run lint`
 Lint source files using [ESLint](http://eslint.org)/.
@@ -139,6 +130,18 @@ Run the test using [Mocha](https://mochajs.org/).
 Output directory : `reports/tests/unit/`.
 
 The output directory it's clean at the begining of the command.
+
+#### Coverage
+Coverage is performed by using [Istanbul/nyc](https://istanbul.js.org/).
+
+```bash
+npm run test-cov
+```
+
+This command will generate:
+* Unit tests reports as describe bellow
+* `./reports/tests/unit/coverage/lcov.info' : lcov file
+* `./reports/tests/unit/coverage/lcov-report/index.html' : HTML report file
 
 ## Continuous Integration
 Travis is already configured with several jobs and stages:

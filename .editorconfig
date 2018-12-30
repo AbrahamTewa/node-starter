@@ -9,7 +9,7 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-[*.{json,yml}, .babelrc]
+[*.{json,yml}, .babelrc, .remarkrc, .stylelintrc]
 indent_size = 4
 
 [package.json]

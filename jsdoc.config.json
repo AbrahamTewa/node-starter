@@ -1,0 +1,18 @@
+{
+    "opts": {
+        "recurse": true,
+        "destination": "./jsdoc/reference",
+        "template": "node_modules/minami"
+    },
+    "source": {
+        "include": [
+            "src"
+        ]
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    }
+}
+

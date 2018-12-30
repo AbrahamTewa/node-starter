@@ -51,7 +51,16 @@ jobs:
 
         - stage: validation
           name: "Lint"
-          script: "npm test"
+          script:
+                - npm run lint
+
+        - stage: validation
+          name: SonarCloud
+          addons:
+            sonarcloud:
+              organization: "abrahamtewa-github"
+          script:
+            - sonar-scanner
 
         - stage: release
           name: "Release"

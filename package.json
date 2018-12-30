@@ -1,6 +1,6 @@
 {
   "name": "starter.nodejs",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Starter kit for NodeJS",
   "author": "Abraham TEWA",
   "license": "MIT",
@@ -13,7 +13,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "gulp build",
-    "doc:jsdoc": "jsdoc -c jsdoc.json --readme README.md",
+    "doc:jsdoc": "jsdoc -c jsdoc.config.json --readme README.md",
     "lint": "run-s lint:*",
     "lint:javascript": "eslint .",
     "lint:markdown": "remark . --quiet --frail",
@@ -23,7 +23,7 @@
     "start:brk": "node --inspect-brk --require @babel/register src/cli.js",
     "test": "gulp clean:tests:unit && mocha src/**/*.spec.js --opts mocha.opts",
     "test-cov": "gulp clean:tests:unit && cross-env NODE_ENV=test nyc mocha src/**/*.spec.js --opts mocha.opts",
-    "update:reference": "jsdoc2md -c jsdoc.json --files src > docs/REFERENCE.md"
+    "update:reference": "jsdoc2md -c jsdoc.config.json --files src > docs/REFERENCE.md"
   },
   "repository": {
     "type": "git",
