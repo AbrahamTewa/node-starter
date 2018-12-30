@@ -1,6 +1,6 @@
 # starter.nodejs
 
-[![Build Status](https://travis-ci.org/AbrahamTewa/starter.nodejs.svg?branch=master)](https://travis-ci.org/AbrahamTewa/starter.nodejs) [![Coverage Status](https://coveralls.io/repos/github/AbrahamTewa/starter.nodejs/badge.svg?branch=master)](https://coveralls.io/github/AbrahamTewa/starter.nodejs?branch=master) [![Dependency status](https://david-dm.org/AbrahamTewa/starter.nodejs.svg)](https://david-dm.org/AbrahamTewa/starter.nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/07acca80a73449ed98b6b0b44c2800e3)](https://www.codacy.com/app/AbrahamTewa/starter.nodejs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AbrahamTewa/starter.nodejs&amp;utm_campaign=Badge_Grade) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AbrahamTewa_starter.nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=AbrahamTewa_starter.nodejs)
+[![Build Status](https://travis-ci.org/AbrahamTewa/starter.nodejs.svg?branch=master)](https://travis-ci.org/AbrahamTewa/starter.nodejs) [![Coverage Status](https://coveralls.io/repos/github/AbrahamTewa/starter.nodejs/badge.svg?branch=master)](https://coveralls.io/github/AbrahamTewa/starter.nodejs?branch=master) [![Dependency status](https://david-dm.org/AbrahamTewa/starter.nodejs.svg)](https://david-dm.org/AbrahamTewa/starter.nodejs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/07acca80a73449ed98b6b0b44c2800e3)](https://www.codacy.com/app/AbrahamTewa/starter.nodejs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=AbrahamTewa/starter.nodejs&amp;utm_campaign=Badge_Grade) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AbrahamTewa_starter.nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=AbrahamTewa_starter.nodejs) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Simple node starter, using Babel 7, gulp 4, unit testing, eslinting, etc...
 
@@ -17,7 +17,6 @@ This project is meant to be a NodeJS starter. It expose a simple CLI that displa
 - [ESLint 5](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
 - [EditorConfig](http://editorconfig.com/), just because it's a must-have.
 - [remark-lint](https://github.com/remarkjs/remark-lint) configured with recommended rules
-- [SonarCloud](https://sonarcloud.io) integration
 
 ### Unit testing, with coverage
 Complete unit-testing environment :
@@ -38,6 +37,7 @@ See `src/helpers.spec.js` for a complete example of all these tools.
   - Release
   - Github Pages
 - [Codacy](https://codacy.com) integration
+- [SonarCloud](https://sonarcloud.io) integration
 
 ### Documentation
 - [jsDoc](http://usejsdoc.org/) with [minami theme](https://www.npmjs.com/package/minami) for documentation generation.
@@ -47,7 +47,7 @@ See `src/helpers.spec.js` for a complete example of all these tools.
 
 ```bash
 git clone https://github.com/AbrahamTewa/starter.nodejs.git
-cd node-starter
+cd starter.nodejs
 npm ci
 npm run build
 ```
@@ -64,7 +64,7 @@ In travis, you need to setup the following variables for your project:
 #### `CODACY_PROJECT_TOKEN`
 
 Codacy's project token. See "Project API" in the Settings/Integrations tab of the codacy project.
-This token will be by use travis to send coverage report to codacy.
+This token will be use by travis to send coverage report to codacy.
 
 #### `GITHUB_TOKEN`
 
@@ -117,13 +117,6 @@ npm run build
 ### `npm run lint`
 Lint source files using [ESLint](http://eslint.org)/.
 
-### `npm run test-cov`
-Run tests with coverage using [Istanbul](https://istanbul.js.org/) and [Mocha](https://mochajs.org/) for test.
-
-Output directory : `reports/tests/unit/`.
-
-The output directory it's clean at the begining of the command.
-
 ### `npm run test`
 Run the test using [Mocha](https://mochajs.org/).
 
@@ -131,8 +124,8 @@ Output directory : `reports/tests/unit/`.
 
 The output directory it's clean at the begining of the command.
 
-#### Coverage
-Coverage is performed by using [Istanbul/nyc](https://istanbul.js.org/).
+### `npm run test-cov`
+Run tests with coverage using [Istanbul/nyc](https://istanbul.js.org/).
 
 ```bash
 npm run test-cov
