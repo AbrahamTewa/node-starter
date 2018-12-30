@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.0...v1.6.1) (2018-12-30)
+
+
+### Bug Fixes
+
+* Fix readme.md ([769c4c0](https://github.com/AbrahamTewa/starter.nodejs/commit/769c4c0))
+* Fix readme.md ([74e609e](https://github.com/AbrahamTewa/starter.nodejs/commit/74e609e))
+
 # [1.6.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.5.0...v1.6.0) (2018-12-30)
 
 
