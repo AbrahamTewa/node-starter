@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.1...v1.6.2) (2018-12-30)
+
+
+### Bug Fixes
+
+* Fix sonar exclusion ([cf4d5fc](https://github.com/AbrahamTewa/starter.nodejs/commit/cf4d5fc))
+
 ## [1.6.1](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.0...v1.6.1) (2018-12-30)
 
 

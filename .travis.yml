@@ -52,7 +52,6 @@ jobs:
             # Use variable: CODACY_PROJECT_TOKEN
             # See https://github.com/codacy/node-codacy-coverage#identifying-the-project
             - more reports/tests/unit/coverage/lcov.info | npx codacy-coverage
-            - more reports/tests/unit/coverage/lcov.info | npx codacy-coverage
 
             # Perform sonar analysis on the coverage
             # Use variable: SONAR_TOKEN
