@@ -31,7 +31,6 @@ jobs:
           script:
               - npm test
 
-
         - stage: validation
           name: "Unit tests coverage"
           if: branch in (master, develop)
@@ -56,6 +55,11 @@ jobs:
             # Perform sonar analysis on the coverage
             # Use variable: SONAR_TOKEN
             - sonar-scanner
+
+        - stage: validation
+          name: "Audit"
+          script:
+                - npm audit
 
         - stage: release
           name: "Release"

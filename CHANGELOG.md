@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.2...v1.7.0) (2019-02-15)
+
+
+### Bug Fixes
+
+* Remove duplicate line ([3c7f43c](https://github.com/AbrahamTewa/starter.nodejs/commit/3c7f43c))
+
+
+### Features
+
+* Package update ([b73425f](https://github.com/AbrahamTewa/starter.nodejs/commit/b73425f))
+
 ## [1.6.2](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.1...v1.6.2) (2018-12-30)
 
 
