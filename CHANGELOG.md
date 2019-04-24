@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.7.0...v1.8.0) (2019-02-15)
+
+
+### Features
+
+* Add audit ci job ([5344547](https://github.com/AbrahamTewa/starter.nodejs/commit/5344547))
+
 # [1.7.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.6.2...v1.7.0) (2019-02-15)
 
 

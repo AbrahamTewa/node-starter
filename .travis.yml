@@ -56,11 +56,6 @@ jobs:
             # Use variable: SONAR_TOKEN
             - sonar-scanner
 
-        - stage: validation
-          name: "Audit"
-          script:
-                - npm audit
-
         - stage: release
           name: "Release"
           if: branch = master
