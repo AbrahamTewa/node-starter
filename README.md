@@ -14,7 +14,7 @@ This project is meant to be a NodeJS starter. It expose a simple CLI that displa
 - [conventional commits](http://conventionalcommits.org/) with [semantic-release](https://semantic-release.gitbook.io/)
 
 ### Code quality
-- [ESLint 5](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
+- [ESLint 6](http://eslint.org/) with [Airbnb base rules](https://www.npmjs.com/package/eslint-config-airbnb-base). The only change on the airbnb rules is the indent rule, set to 4. Just update `.eslintrc` file to change this behavior.
 - [EditorConfig](http://editorconfig.com/), just because it's a must-have.
 - [remark-lint](https://github.com/remarkjs/remark-lint) configured with recommended rules
 
