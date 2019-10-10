@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.9.0...v1.10.0) (2019-10-10)
+
+
+### Features
+
+* update dependencies ([2d80b73](https://github.com/AbrahamTewa/starter.nodejs/commit/2d80b73d73389d79a231cd408cf98b1a05d22891))
+
 # [1.9.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.8.0...v1.9.0) (2019-04-24)
 
 
