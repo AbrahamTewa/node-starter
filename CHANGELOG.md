@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.8.0...v1.9.0) (2019-04-24)
+
+
+### Features
+
+* Remove audit job in travis ([5cfd420](https://github.com/AbrahamTewa/starter.nodejs/commit/5cfd420))
+* remove unused packages ([9be38cc](https://github.com/AbrahamTewa/starter.nodejs/commit/9be38cc))
+* Update dependencies ([a03cfea](https://github.com/AbrahamTewa/starter.nodejs/commit/a03cfea))
+
 # [1.8.0](https://github.com/AbrahamTewa/starter.nodejs/compare/v1.7.0...v1.8.0) (2019-02-15)
 
 
